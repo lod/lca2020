@@ -1,0 +1,6 @@
+[submodule "slides/reveal.js"]
+	path = slides/reveal.js
+	url = git@github.com:hakimel/reveal.js.git
+[submodule "slides/reveal_external"]
+	path = slides/reveal_external
+	url = git@github.com:janschoepke/reveal_external.git

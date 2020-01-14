@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Rapid GUI development for IOT systems - pycon2017</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+
+
+<style>
+mark {
+	display: block; /* make background go full width */
+	background-color: #e54;
+}
+.reveal p.attribution {
+	font-size: 20px;
+	line-height: 1em;
+	margin-top: -25px;
+}
+.twocol, .multicol {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.reveal pre code {
+	max-height: unset !important;
+	overflow-x: hidden !important;
+}
+.reveal .twocol > pre, .twocol > * {
+	width: 40%;
+}
+#footer {
+	position: absolute;
+	bottom: 0%;
+	width: 100%;
+	left: 0%;
+	height: 2em;
+	background-color: rgb(0, 177, 197);
+	color: rgba(0,0,0,.5);
+	padding-right: 50px;
+}
+#footer-content {
+	/* To get the right margin working */
+	display: flex;
+    justify-content: space-between;
+}
+
+#footer img {
+	height: 1.2em;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	max-height: 100%;
+	max-width: 100%;
+}
+</style>
+
+
+	</head>
+	<body>
+		
+		<div id="hidden" style="display:none;">
+			<div id="header">
+				<div id="footer">
+				<div id="footer-content">
+					<img src="images/lca_horiz_blue.svg" alt="LCA logo">
+					<p>Kicad for software developers</p>
+					<p><a href="https://github.com/lod/lca2020/">
+						https://github.com/lod/lca2020/
+					</a></p>
+				</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="reveal"><div class="slides">
+
+		<section style="">
+			<!-- <h1>Rapid GUI development for IOT systems</h1> -->
+			<!-- <iframe srcdoc="<p style='background: green'></p>"></iframe> -->
+			<h1>Kicad for software developers</h1>
+			<b>with David Tulloh</b>
+			<p>&nbsp;</p>
+			<p>Please install Kicad &ge;5.0</p>
+
+			<aside class="notes" data-markdown>
+- Welcome, thank for attending
+			</aside>
+		</section>
+
+		<section>
+			<h1>What</h1>
+			<ul>
+				<li>Tutorial</li>
+				<li>Introduction to Schematic drawing</li>
+				<li>Introduction to PCB layout</li>
+				<li>Not covering electronics design</li>
+			</ul>
+			<aside class="notes" data-markdown>
+- Tutorial = play along
+- double session
+			</aside>
+		</section>
+
+		<section>
+		<section>
+			<h1>Sprinkler System</h1>
+			<img class="plain" style="background: unset;" data-src="images/valve.png">
+		</section>
+
+		<section>
+			<h1>Sprinkler System</h1>
+			<img class="plain" style="background: unset;" data-src="images/block.png">
+		</section>
+		</section>
+
+		<section>
+			<h1>Timeline</h1>
+			<ul>
+				<li>Intro - 10 mins</li>
+				<li>Schematics - 30 mins</li>
+				<li>Schematic wrap - 5 mins</li>
+				<li>PCB Intro - 10 mins</li>
+				<li>PCB - 30 mins</li>
+				<li>PCB wrap - 5 mins</li>
+			</ul>
+		</section>
+
+		<section>
+			<h1>Who</h1>
+			<ul>
+				<li style="line-height: 100px">Electronics designer</span><img class="plain" style="vertical-align: middle" data-src="images/bluehat_sm.jpg"></li>
+				<li style="line-height: 100px">Software developer</span><img class="plain" style="vertical-align: middle" data-src="images/greenhat_sm.jpg"></li>
+			</ul>
+			<aside class="notes" data-markdown>
+- Not a Kicad developer
+- Am a currently employed as a electronics designer
+- Have used Kicad and propriatary tools
+- Come from a users perspective
+- Advertised as for software developers
+- In the past I have been a software developer
+- Will be replacing standard car analogy with software dev analogy
+- Will try and bridge software thought approaches to electronics
+- Non-software people fine, miss out on wit
+			</aside>
+		</section>
+
+		<section>
+			<h1>Schematic</h1>
+			<ul>
+				<li>Describes how device works</li>
+				<li>Abstract</li>
+				<li>Source code, not binary</li>
+			</ul>
+			<aside class="notes" data-markdown>
+- Connections, not physical wires
+- Symbols, not physical wires
+			</aside>
+		</section>
+
+		<section>
+			<h1>Schematic demo</h1>
+			<aside class="notes" data-markdown>
+- Show, explain, your turn
+- Reproducing circuit in handout
+- Functional blocks
+			</aside>
+		</section>
+
+		<section>
+			<h1>Schematic wrap</h1>
+			<ul>
+				<li>Annotate</li>
+				<li>DRC</li>
+				<li>Footprints</li>
+			</ul>
+			<aside class="notes" data-markdown>
+- Digital rule check
+- Can also generate netlist and BOM
+			</aside>
+		</section>
+
+		<section>
+			<h1>PCB Intro</h1>
+			<ul>
+				<li>Schematic to PCB</li>
+				<li>Compilation process</li>
+				<li>Building a physical product</li>
+			</ul>
+			<aside class="notes" data-markdown>
+			</aside>
+		</section>
+
+		<section>
+			<section>
+				<img class="plain" style="background: unset;" data-src="images/pcbs.jpeg">
+			</section>
+			<section>
+				<h1>PCB Core</h1>
+				<img class="plain" style="background: unset;" data-src="images/pcb_core.png">
+			</section>
+			<section>
+				<h1>1. Drilling</h1>
+				<img class="plain" style="background: unset;" data-src="images/pcb_drill.png">
+			</section>
+			<section>
+				<h1>2. Plate holes</h1>
+				<img class="plain" style="background: unset;" data-src="images/pcb_hole_plate.png">
+			</section>
+			<section>
+				<h1>3. Etch</h1>
+				<img class="plain" style="background: unset;" data-src="images/pcb_etched.png">
+			</section>
+			<section>
+				<h1>4. Solder mask</h1>
+				<img class="plain" style="background: unset;" data-src="images/pcb_silked.png">
+			</section>
+			<section>
+				<h1>5. Plate</h1>
+				<img class="plain" style="background: unset;" data-src="images/pcb_enig.png">
+			</section>
+			<section>
+				<h1>6. Silkscreen</h1>
+				<img class="plain" style="background: unset;" data-src="images/pixma-printer-2.jpg">
+			</section>
+		</section>
+		<section>
+			<h1>PCB Layout Task</h1>
+			<ul>
+				<li>Position component footprints</li>
+				<li>Define traces and vias</li>
+				<li>Position and add silkscreen</li>
+			</ul>
+			<aside class="notes" data-markdown>
+- Footprints define copper pads and include solder mask
+- Traces build connectivity
+- Looping through steps
+			</aside>
+		</section>
+		<section>
+			<h1>PCB Demo</h1>
+		</section>
+
+		</div></div>
+
+<!-- TODO: Add target time to the top of each comment block -->
+
+		<script>
+
+			head.load("reveal.js/css/reveal.css");
+			head.load("reveal.js/css/theme/white.css");
+
+			head.js("reveal.js/js/reveal.js", function() {
+				Reveal.initialize({
+					width: 1280,
+					height: 720,
+					margin: 0.1,
+					dependencies: [
+						{src: "reveal.js/plugin/notes/notes.js", async: true},
+						{src: "reveal_external/external/external.js", async: true},
+						{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+						{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+					],
+				});
+			});
+
+			// 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+
+			var header = document.getElementById('header');
+			if ( window.location.search.match( /print-pdf/gi ) ) {
+				Reveal.addEventListener( 'ready', function( event ) {
+					document.querySelector('.slide-background').append(header);
+				});
+			}
+			else {
+				document.querySelector('div.reveal').append(header);
+			}
+
+		</script>
+	</body>
+</html>
