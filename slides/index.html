@@ -36,23 +36,19 @@ mark {
 	left: 0%;
 	height: 2em;
 	background-color: rgb(0, 177, 197);
-	color: rgba(0,0,0,.5);
+	color: rgba(0,0,0,.8);
 	padding-right: 50px;
+	font-size: 24px;
+	display: flex;
+    justify-content: space-between;
+	align-items: center;
 }
 #footer-content {
 	/* To get the right margin working */
-	display: flex;
-    justify-content: space-between;
 }
 
 #footer img {
 	height: 1.2em;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-	max-height: 100%;
-	max-width: 100%;
 }
 </style>
 
@@ -63,13 +59,13 @@ mark {
 		<div id="hidden" style="display:none;">
 			<div id="header">
 				<div id="footer">
-				<div id="footer-content">
+					<!-- <div id="footer-content"> -->
 					<img src="images/lca_horiz_blue.svg" alt="LCA logo">
 					<p>Kicad for software developers</p>
-					<p><a href="https://github.com/lod/lca2020/">
+					<p>
+					<!-- <a href="https://github.com/lod/lca2020/"> -->
 						https://github.com/lod/lca2020/
-					</a></p>
-				</div>
+					&nbsp;</p>
 				</div>
 			</div>
 		</div>
@@ -106,7 +102,7 @@ mark {
 		<section>
 		<section>
 			<h1>Sprinkler System</h1>
-			<img class="plain" style="background: unset;" data-src="images/valve.png">
+			<img class="plain" style="background: unset; margin: 0; height: 400px;" data-src="images/valve.png">
 		</section>
 
 		<section>
@@ -130,8 +126,8 @@ mark {
 		<section>
 			<h1>Who</h1>
 			<ul>
-				<li style="line-height: 100px">Electronics designer</span><img class="plain" style="vertical-align: middle" data-src="images/bluehat_sm.jpg"></li>
-				<li style="line-height: 100px">Software developer</span><img class="plain" style="vertical-align: middle" data-src="images/greenhat_sm.jpg"></li>
+				<li style="line-height: 100px">Electronics designer &nbsp;&nbsp;<img class="plain" style="vertical-align: middle" data-src="images/bluehat_sm.jpg"></li>
+				<li style="line-height: 100px">Software developer &nbsp;&nbsp;<img class="plain" style="vertical-align: middle" data-src="images/greenhat_sm.jpg"></li>
 			</ul>
 			<aside class="notes" data-markdown>
 - Not a Kicad developer
@@ -194,7 +190,7 @@ mark {
 
 		<section>
 			<section>
-				<img class="plain" style="background: unset;" data-src="images/pcbs.jpeg">
+				<img class="plain" style="background: unset; height: 600px;" data-src="images/pcbs.jpeg">
 			</section>
 			<section>
 				<h1>PCB Core</h1>
@@ -222,7 +218,7 @@ mark {
 			</section>
 			<section>
 				<h1>6. Silkscreen</h1>
-				<img class="plain" style="background: unset;" data-src="images/pixma-printer-2.jpg">
+				<img class="plain" style="background: unset; height: 300px;" data-src="images/pixma-printer-2.jpg">
 			</section>
 		</section>
 		<section>
@@ -256,6 +252,7 @@ mark {
 					width: 1280,
 					height: 720,
 					margin: 0.1,
+					center: false,
 					dependencies: [
 						{src: "reveal.js/plugin/notes/notes.js", async: true},
 						{src: "reveal_external/external/external.js", async: true},
